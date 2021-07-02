@@ -25,6 +25,10 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :assignment, WeatherForecast,
+  url: "https://api.openweathermap.org/data/2.5/onecall",
+  api_key: "62bff1953b2258be6ea949cf0f5621ab"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
